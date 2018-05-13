@@ -1,11 +1,10 @@
 Ideally run inside a python 3.5.2 virtual environment
 
 Prerequisites:
-Please ensure that spacy is installed and spacy models are downloaded and linked to "en".
+Please ensure that spacy is installed and spacy models are downloaded 
  1) spacy
        pip install spacy
-       python -m spacy download en_core_web_md
-       python -m spacy link en_core_web_md en
+       python -m spacy download en_core_web_lg
 
 To run the code:
  1) clone the project and get inside the project
