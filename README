@@ -1,0 +1,33 @@
+Ideally run inside a python 3.5.2 virtual environment
+
+Prerequisites:
+Please ensure that spacy is installed and spacy models are downloaded and linked to "en".
+ 1) spacy
+       pip install spacy
+       python -m spacy download en_core_web_md
+       python -m spacy link en_core_web_md en
+
+To run the code:
+ 1) clone the project and get inside the project
+        cd intent-classifier
+ 2) Install requirements:
+        pip install -r requirements.txt
+ 2) cd src
+ 3) python IntentClassifier.py
+    - This prints the f1 and saves the model in intent-classifier/model/
+ 4) python IntentClassifierServer.py
+    - This will run a service by default at port 8081
+    - If required the port can be changed from Constants.py
+    - Send a post request to the service
+       eg:
+       Request:
+       curl -X POST   http://localhost:8081/predict -H 'content-type: application/json' -d '{"query":"what time is it"}'
+
+       Response:
+       {"probability": 0.7848451831445732, "label": "when"}
+
+The best model has f1 around 0.89
+
+In case of any path issues (Like loading model, saving model), please edit the Constants.py and try giving the absolute path
+
+
