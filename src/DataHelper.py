@@ -3,7 +3,7 @@ import json
 import io
 import numpy as np
 print ("Loading spacy model")
-spacy_model = spacy.load("en_core_web_md")
+spacy_model = spacy.load("en_core_web_lg")
 print ("Done loading spacy model")
 from Constants import INDEX_TO_LABEL_FILE_PATH,DATA_PATH
 
